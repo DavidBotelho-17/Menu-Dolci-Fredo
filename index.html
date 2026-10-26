@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cardápio | Dolci Freddo, Gelateria e Cafeteria em Laguna, SC</title>
+<meta name="description" content="Cardápio digital da Dolci Freddo: pizzas napolitanas, massas, croissants, gelatos, bebidas e mais. Monte seu pedido e envie pelo WhatsApp.">
+<meta name="theme-color" content="#1f3d2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Dolci Freddo, voltar ao site"><b>Dolci Freddo</b><small>Gelato Italiano &amp; Cafeteria</small></a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap intro">
+    <h1>Escolha, monte e <em>peça pelo WhatsApp.</em></h1>
+  
+  </section>
+
+  <div class="bar">
+    <div class="wrap">
+      <div class="bar__row">
+        <label class="search" id="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Busque por nome ou ingrediente" autocomplete="off" aria-label="Buscar no cardápio">
+          <button type="button" id="qx" aria-label="Limpar busca">×</button>
+        </label>
+        <div class="chips" role="group" aria-label="Filtros">
+          <button class="chip" data-f="zl" aria-pressed="false">Zero lactose</button>
+          <button class="chip" data-f="sg" aria-pressed="false">Sem glúten</button>
+          <button class="chip" data-f="vg" aria-pressed="false">Opção vegana</button>
+        </div>
+      </div>
+      <nav class="tabs" id="tabs" aria-label="Categorias"></nav>
+    </div>
+  </div>
+
+  <div class="wrap" id="menu"></div>
+  <div class="wrap empty" id="empty" hidden>
+    <h2>Nada encontrado por aqui</h2>
+    <p>Tente outro nome ou ingrediente, ou remova os filtros.</p>
+    <button class="btn" id="clear">Limpar busca e filtros</button>
+  </div>
+</main>
+
+<footer class="foot"><div class="wrap"><p><b>Dolci Freddo</b> · Av. Conselheiro Jerônimo Coelho, 140, Centro, Laguna, SC</p></div></footer>
+
+<button class="fab" id="fab" hidden aria-label="Abrir sacola"><span class="fab__count" id="fc">0</span><span class="fab__label">Ver sacola</span><span class="fab__total" id="ft">R$ 0,00</span></button>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Sua sacola" aria-hidden="true">
+  <div class="drawer__head"><h2>Sua sacola</h2><button class="x" id="close" aria-label="Fechar sacola">×</button></div>
+  <div class="drawer__body" id="lines"></div>
+  <div class="drawer__foot">
+    <div class="sum"><span>Total</span><b id="total">R$ 0,00</b></div>
+    <button class="btn btn--wa" id="send" disabled>Enviar pedido pelo WhatsApp</button>
+    <small>Você confere tudo no WhatsApp antes de confirmar.</small>
+  </div>
+</aside>
+
+<script src="script.js">
+</script>
+</body>
+</html>
